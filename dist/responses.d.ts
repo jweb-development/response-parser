@@ -33,6 +33,6 @@ export interface IParseResponse {
     dispatch?(dispatchOptions: IDispatch): void;
     dispatchType?: String;
     publicEndpoint?: Boolean;
-    logoutUser?: Boolean;
+    shouldDispatch?: Boolean;
     payload?: Object;
 }
