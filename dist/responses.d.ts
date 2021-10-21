@@ -32,7 +32,6 @@ export interface IDispatch {
 export interface IParseResponse {
     dispatch?(dispatchOptions: IDispatch): void;
     dispatchType?: String;
-    publicEndpoint?: Boolean;
     shouldDispatch?: Boolean;
     payload?: Object;
 }
