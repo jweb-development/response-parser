@@ -12,7 +12,7 @@ exports.parseResponse = (response, parseOptions = {}) => {
         // If user is attemtping to hit a non-public endpoint with invalid credentials, log them out
         const { dispatch = () => { }, dispatchType = '', payload = {} } = parseOptions;
         dispatch({ type: dispatchType, payload });
-        return false;
+        return unhandledErrorResponse;
     }
     else if (response.status) {
         const { status } = response;

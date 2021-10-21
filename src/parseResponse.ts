@@ -10,14 +10,14 @@ const unhandledErrorResponse = {
   message: 'There was an unhandled error. Please try again'
 }
 
-export const parseResponse = (response: IRequestResponse, parseOptions: IParseResponse = {}): (IStatuses | IUnhandled | Boolean) => {
+export const parseResponse = (response: IRequestResponse, parseOptions: IParseResponse = {}): (IStatuses | IUnhandled) => {
   const { shouldDispatch = false } = parseOptions
 
   if (response.status && response.status === 401 && shouldDispatch) {
     // If user is attemtping to hit a non-public endpoint with invalid credentials, log them out
     const { dispatch = () => { }, dispatchType = '', payload = {} } = parseOptions
     dispatch({ type: dispatchType, payload })
-    return false
+    return unhandledErrorResponse
   } else if (response.status) {
     const { status } = response
     return responses[status] || unhandledErrorResponse
