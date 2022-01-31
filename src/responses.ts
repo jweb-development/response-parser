@@ -83,9 +83,9 @@ export const responses: { [status: number]: IStatuses } = {
 
 export interface IRequestResponse {
   status: number;
-  body: Object;
-  type: String;
-  url: String;
+  body?: Object;
+  type?: String;
+  url?: String;
 }
 
 export interface IDispatch {

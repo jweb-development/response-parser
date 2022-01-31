@@ -21,9 +21,9 @@ export declare const responses: {
 };
 export interface IRequestResponse {
     status: number;
-    body: Object;
-    type: String;
-    url: String;
+    body?: Object;
+    type?: String;
+    url?: String;
 }
 export interface IDispatch {
     type: String;
