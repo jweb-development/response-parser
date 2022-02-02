@@ -25,6 +25,12 @@ export const responses: { [status: number]: IStatuses } = {
     error: false,
     message: 'OK'
   },
+  202: {
+    code: 202,
+    type: responseTypes.SUCCESS,
+    error: false,
+    message: 'The request has been accepted for processing.'
+  },
   204: {
     code: 204,
     type: responseTypes.NO_CONTENT,

@@ -20,6 +20,12 @@ exports.responses = {
         error: false,
         message: 'OK'
     },
+    202: {
+        code: 202,
+        type: exports.responseTypes.SUCCESS,
+        error: false,
+        message: 'The request has been accepted for processing.'
+    },
     204: {
         code: 204,
         type: exports.responseTypes.NO_CONTENT,
