@@ -11,9 +11,17 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14.x'
-      - run: npm ci
-      - run: npm test
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.PUBLISH_TOKEN }}
-      - run: npm version patch
+      - run:  |
+          npm ci
+          npm test
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          npm version patch
+          git push https://$USERNAME:$REPO_KEY@github.com/jweb-development/response-parser.git
+          git push --tags https://$USERNAME:$REPO_KEY@github.com/jweb-development/response-parser.git
+        env:
+          REPO_KEY: ${{secrets.PUBLISH_TOKEN}}
+          USERNAME: github-actions[bot]
