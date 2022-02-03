@@ -1,0 +1,8 @@
+{
+  "responses": {
+    "success": {
+      "status": 200,
+      "message": "OK"
+    }
+  }
+}
