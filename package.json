@@ -1,6 +1,6 @@
 {
   "name": "jweb-response-parser",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "JWEBs Response Library",
   "main": "dist/index.js",
   "scripts": {
