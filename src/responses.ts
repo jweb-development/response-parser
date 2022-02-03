@@ -34,7 +34,7 @@ export const responses: { [status: number]: IStatuses } = {
   204: {
     code: 204,
     type: responseTypes.NO_CONTENT,
-    error: true,
+    error: false,
     message: 'The requested action has already been performed.'
   },
   206: {
