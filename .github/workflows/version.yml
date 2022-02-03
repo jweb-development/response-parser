@@ -14,6 +14,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14.x'
+      - run: git config --global url."https://${{ secrets.PUBLISH_TOKEN }}@github.com".insteadOf ssh://git@github.com
       - run: npm ci
       - run: npm test
       - run: npm version patch
+        env:
+          GITHUB_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
