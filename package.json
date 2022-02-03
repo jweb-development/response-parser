@@ -1,11 +1,11 @@
 {
   "name": "jweb-response-parser",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "JWEBs Response Library",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
     "preversion": "npm run lint",
@@ -19,7 +19,12 @@
   "bugs": {
     "url": "https://github.com/jweb-development/response-parser/issues"
   },
-  "keywords": ["JWEB", "HTTP", "HTTP Codes", "HTTP Responses"],
+  "keywords": [
+    "JWEB",
+    "HTTP",
+    "HTTP Codes",
+    "HTTP Responses"
+  ],
   "homepage": "https://github.com/jweb-development/response-parser#readme",
   "author": "JWEB Development LLC",
   "license": "ISC",

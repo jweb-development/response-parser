@@ -1,11 +1,4 @@
-import { parseResponse } from './parseResponse'
-import {
-  responseTypes, responses, IParseResponse, IRequestResponse,
-  IDispatch, IStatuses
-} from './responses'
+import { parseResponse } from './parseResponse';
+import { responseTypes, responses, IParseResponse, IRequestResponse, IDispatch, IStatuses } from './responses';
 
-export {
-  parseResponse,
-  responseTypes, responses, IParseResponse, IRequestResponse,
-  IDispatch, IStatuses
-}
+export { parseResponse, responseTypes, responses, IParseResponse, IRequestResponse, IDispatch, IStatuses };

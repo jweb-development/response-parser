@@ -8,8 +8,8 @@ export const responseTypes = {
   NOT_FOUND: 'NOT_FOUND',
   DUPLICATE_ENTRY: 'DUPLICATE_ENTRY',
   INTERNAL_ERROR: 'INTERNAL_ERROR',
-  UNIMPLEMENTED: 'UNIMPLEMENTED'
-}
+  UNIMPLEMENTED: 'UNIMPLEMENTED',
+};
 
 export interface IStatuses {
   code: number;
@@ -23,69 +23,69 @@ export const responses: { [status: number]: IStatuses } = {
     code: 200,
     type: responseTypes.SUCCESS,
     error: false,
-    message: 'OK'
+    message: 'OK',
   },
   202: {
     code: 202,
     type: responseTypes.SUCCESS,
     error: false,
-    message: 'The request has been accepted for processing.'
+    message: 'The request has been accepted for processing.',
   },
   204: {
     code: 204,
     type: responseTypes.NO_CONTENT,
     error: false,
-    message: 'The requested action has already been performed.'
+    message: 'The requested action has already been performed.',
   },
   206: {
     code: 206,
     type: responseTypes.PARTIAL_SUCCESS,
     error: true,
-    message: 'Your request completed successfully, but there was an issue sending out the notification.'
+    message: 'Your request completed successfully, but there was an issue sending out the notification.',
   },
   400: {
     code: 400,
     type: responseTypes.BAD_REQUEST,
     error: true,
-    message: 'There was a problem with your request. Please try again.'
+    message: 'There was a problem with your request. Please try again.',
   },
   401: {
     code: 401,
     type: responseTypes.UNAUTHORIZED,
     error: true,
-    message: 'Unauthorized.'
+    message: 'Unauthorized.',
   },
   403: {
     code: 403,
     type: responseTypes.FORBIDDEN,
     error: true,
-    message: 'Forbidden.'
+    message: 'Forbidden.',
   },
   404: {
     code: 404,
     type: responseTypes.NOT_FOUND,
     error: true,
-    message: 'The requested resource could not be found. Please try again.'
+    message: 'The requested resource could not be found. Please try again.',
   },
   409: {
     code: 409,
     type: responseTypes.DUPLICATE_ENTRY,
     error: true,
-    message: 'A resource already exists with those specifications. Please adjust your input and try again.'
+    message: 'A resource already exists with those specifications. Please adjust your input and try again.',
   },
   500: {
     code: 500,
     type: responseTypes.INTERNAL_ERROR,
     error: true,
-    message: 'There was a problem completing your request. Please try again.'
+    message: 'There was a problem completing your request. Please try again.',
   },
   501: {
     code: 501,
     type: responseTypes.UNIMPLEMENTED,
     error: true,
-    message: 'The requested resource has not yet been implemented. Please try again later.'
-  }
-}
+    message: 'The requested resource has not yet been implemented. Please try again later.',
+  },
+};
 
 export interface IRequestResponse {
   status: number;
