@@ -29,7 +29,7 @@ exports.responses = {
     204: {
         code: 204,
         type: exports.responseTypes.NO_CONTENT,
-        error: true,
+        error: false,
         message: 'The requested action has already been performed.'
     },
     206: {
