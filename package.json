@@ -29,7 +29,10 @@
   ],
   "homepage": "https://github.com/jweb-development/response-parser#readme",
   "author": "JWEB Development LLC",
-  "contributors": ["Cesar Juarez", "Jacob Chambliss"],
+  "contributors": [
+    "Cesar Juarez",
+    "Jacob Chambliss"
+  ],
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
