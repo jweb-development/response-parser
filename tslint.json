@@ -4,6 +4,6 @@
         "tslint-config-prettier"
     ],
     "rules": {
-        "no-empty": "false"
+        "no-empty": false
     }
 }
