@@ -12,10 +12,10 @@ export const responseTypes = {
 }
 
 export interface IStatuses {
-  code: Number,
-  type: String,
-  error: Boolean,
-  message: String
+  code: number;
+  type: string;
+  error: boolean;
+  message: string;
 }
 
 export const responses: { [status: number]: IStatuses } = {
@@ -89,19 +89,19 @@ export const responses: { [status: number]: IStatuses } = {
 
 export interface IRequestResponse {
   status: number;
-  body?: Object;
-  type?: String;
-  url?: String;
+  body?: object;
+  type?: string;
+  url?: string;
 }
 
 export interface IDispatch {
-  type: String;
-  payload?: Object;
+  type: string;
+  payload?: object;
 }
 
 export interface IParseResponse {
   dispatch?(dispatchOptions: IDispatch): void;
-  dispatchType?: String;
-  shouldDispatch?: Boolean;
-  payload?: Object;
+  dispatchType?: string;
+  shouldDispatch?: boolean;
+  payload?: object;
 }

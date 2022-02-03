@@ -1,8 +1,8 @@
 import { IRequestResponse, IParseResponse, responses, IStatuses } from './responses'
 
 export interface IUnhandled {
-  error: Boolean,
-  message: String
+  error: boolean,
+  message: string
 }
 
 const unhandledErrorResponse = {
