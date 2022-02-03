@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.PUBLISH_TOKEN }}
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v2
         with:
@@ -17,5 +17,3 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm version patch
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
