@@ -11,7 +11,7 @@
     "version": "npm run format && git add -A && git commit -m \"version bump\"",
     "pretest": "npm run build",
     "test": "mocha",
-    "prepublishOnly": "npm test"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
