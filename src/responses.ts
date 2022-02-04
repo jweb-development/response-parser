@@ -7,6 +7,7 @@ export const responseTypes = {
   FORBIDDEN: 'FORBIDDEN',
   NOT_FOUND: 'NOT_FOUND',
   DUPLICATE_ENTRY: 'DUPLICATE_ENTRY',
+  TOO_MANY_REQUESTS: 'TOO_MANY_REQUESTS',
   INTERNAL_ERROR: 'INTERNAL_ERROR',
   UNIMPLEMENTED: 'UNIMPLEMENTED',
 };
@@ -72,6 +73,12 @@ export const responses: { [status: number]: IStatuses } = {
     type: responseTypes.DUPLICATE_ENTRY,
     error: true,
     message: 'A resource already exists with those specifications. Please adjust your input and try again.',
+  },
+  429: {
+    code: 429,
+    type: responseTypes.TOO_MANY_REQUESTS,
+    error: true,
+    message: 'The requested resource has received too many requests. Please wait for the server to process previous requests.'
   },
   500: {
     code: 500,
