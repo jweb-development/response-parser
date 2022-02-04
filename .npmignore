@@ -3,3 +3,6 @@ test
 node_modules
 .github
 .vscode
+.prettierrc
+tsconfig.json
+tslint.json
