@@ -9,6 +9,7 @@
     "lint": "tslint -p tsconfig.json",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A && git commit -m \"version bump\"",
+    "postversion": "git push && git push --tags",
     "pretest": "npm run build",
     "test": "mocha",
     "prepublishOnly": "npm run build"
