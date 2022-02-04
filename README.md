@@ -7,7 +7,7 @@ From your terminal, type the following:
 npm i @jweb-development/response-parser
 ```
 
-And from there the package should be ready to go.
+And from there the package should be ready to go!
 
 ## Use Case
 As we handled a growing number of websites that consumed data from REST APIs, we found it burdensome to implement response handling across each codebase. Moreover, we began using Redux for state management across our code; as we received certain statuses (e.g. "Unauthorized") from the API, we found it necessary to immediately dispatch actions to update state for the entire application (e.g. resetting the state and returning the user to a Login component).
