@@ -13,8 +13,8 @@ export const responseTypes = {
 };
 
 export interface IStatuses {
-  code: number;
-  type: string;
+  code?: number;
+  type?: string;
   error: boolean;
   message: string;
 }
