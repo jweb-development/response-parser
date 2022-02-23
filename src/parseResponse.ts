@@ -1,10 +1,5 @@
 import { IRequestResponse, IParseResponse, responses, IStatuses } from './responses';
 
-export interface IUnhandled {
-  error: boolean;
-  message: string;
-}
-
 const unhandledErrorResponse = {
   error: true,
   message: 'There was an unhandled error. Please try again',
@@ -13,7 +8,7 @@ const unhandledErrorResponse = {
 export const parseResponse = (
   response: IRequestResponse,
   parseOptions: IParseResponse = {},
-): IStatuses | IUnhandled => {
+): IStatuses => {
   const { shouldDispatch = false } = parseOptions;
 
   if (response && response.status && (response.status === 401 || response.status === 403) && shouldDispatch) {
