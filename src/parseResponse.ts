@@ -5,10 +5,7 @@ const unhandledErrorResponse = {
   message: 'There was an unhandled error. Please try again',
 };
 
-export const parseResponse = (
-  response: IRequestResponse,
-  parseOptions: IParseResponse = {},
-): IStatuses => {
+export const parseResponse = (response: IRequestResponse, parseOptions: IParseResponse = {}): IStatuses => {
   const { shouldDispatch = false } = parseOptions;
 
   if (response && response.status && (response.status === 401 || response.status === 403) && shouldDispatch) {
