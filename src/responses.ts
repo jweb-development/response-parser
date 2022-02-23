@@ -78,7 +78,8 @@ export const responses: { [status: number]: IStatuses } = {
     code: 429,
     type: responseTypes.TOO_MANY_REQUESTS,
     error: true,
-    message: 'The requested resource has received too many requests. Please wait for the server to process previous requests.'
+    message:
+      'The requested resource has received too many requests. Please wait for the server to process previous requests.',
   },
   500: {
     code: 500,
